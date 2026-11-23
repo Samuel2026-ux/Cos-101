@@ -1,0 +1,34 @@
+from statistics import median, mode
+
+# 1. Function to calculate the sum
+def sum_list(numbers):
+    return sum(numbers)
+
+
+# 2. Function to calculate the average (mean)
+def average_list(numbers):
+    if len(numbers) == 0:
+        return 0
+    return sum(numbers) / len(numbers)
+
+
+# 3. Function to calculate the median and mode
+def median_mode(numbers):
+    if len(numbers) == 0:
+        return None, None
+
+    med = median(numbers)
+    mod = mode(numbers)
+
+    return med, mod
+
+
+# Example usage
+numbers = [2, 4, 4, 6, 8, 10]
+
+print("Sum:", sum_list(numbers))
+print("Average:", average_list(numbers))
+
+med, mod = median_mode(numbers)
+print("Median:", med)
+print("Mode:", mod)
